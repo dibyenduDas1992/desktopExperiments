@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>JavaScript Problem</title>
+		<script type="text/javascript">
+			var a=1;
+			var b=2;
+			var c=3;
+			var d=4;
+			function sum(a,b,c,d){
+				switch(arguments.length){    /* The problem is solved: because when I call the sum() with blank when */
+					case 0:                  /* arguments.length is "0" then all the variables (a,b,c,d) is initialized using switch case */
+						a=1;                 /* when I pass only one arguments when "a" is initialized by passed argument */
+					case 1:                  /* and all other variables (b,c,d) is initialized using switch case, because then arguments.length is "1" */
+						b=2;                 /* and so on.. */
+					case 2:
+						c=3;
+					case 3:
+						d=4;
+					
+					//return a+b+c+d;
+					alert(a+b+c+d);
+				}
+			}
+		</script>
+	</head>
+	<body onload="sum(11,22)">
+	</body>
+</html>

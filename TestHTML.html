@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>This is an TABLE</title>
+        <script type="text/javascript" src="jquery.min.js"></script>
+         <script type="text/javascript">
+				var a="dibyendudas2013@yahoo.co.in";
+				//alert(a.length-1);
+				//alert(a.lastIndexOf('.'));						
+			$(document).ready(function(e) {
+                $("#shoLocation").click(function(){
+					//alert($("#lblName").position());	
+					var value=$("#name").text();
+					$("#name").replaceWith("<input type='text' id='name' />");
+					$("#name").val(value);
+					//alert();
+				});
+				var mail="a@a.com";
+				var a=("a@a".split('@'))[1].split('.')
+				//alert(a.length);
+            });
+			function a(){
+				var b="dibyendu&nl2brabc";	
+			}
+		</script>
+		<style>
+			.box{
+				border:1px solid yellow;
+				background-color:yellow;
+				width:100px; height:100px;
+				position: absolute;
+				top:0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+			#name{
+				border:1px solid black;
+				border-radius:6px;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="box"><div style="position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; width:67px; height:20px;">Center div</div></div>
+        <label id="name">Dibyendu</label>
+        <input type="button" value="Transform" id="shoLocation" />        
+		
+		<label><input type="checkbox" value="check">Check</label>
+	</body>
+</html>
