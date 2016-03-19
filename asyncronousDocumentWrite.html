@@ -1,23 +1,83 @@
 <html>
-    <head>
-        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-    </head>
-    <body>
-        <script type="text/javascript">
-            var url = "http://ads.admarvel.com/fam/javascriptGetAd.php?partner_id=01f7a62b0f0a0513&site_id=17991&target_params=KEYWORDS=%3Ecat%7C%7CSECTION=%3Esearchresults%7C%7CPOS=%3Eatf%7C%7CSITEID=%3E17991%7C%7CBL=%3E0%7C%7CADCOUNT=%3E344&UNIQUE_ID=14581220529055295420773&phone_headers=REDIRECT_OLD_URL=%3Ehttp%3A%2F%2Fpbtng.local.photobucket.com%7C%7CREDIRECT_PRIMARY_SITE=%3Epbtng.local.photobucket.com%7C%7CREDIRECT_APPLICATION_ENV=%3Edevelopment%7C%7CREDIRECT_STATUS=%3E200%7C%7COLD_URL=%3Ehttp%3A%2F%2Fpbtng.local.photobucket.com%7C%7CPRIMARY_SITE=%3Epbtng.local.photobucket.com%7C%7CAPPLICATION_ENV=%3Edevelopment%7C%7CHTTP_HOST=%3Ecjack.pbtng.local.photobucket.com%7C%7CHTTP_UPGRADE_INSECURE_REQUESTS=%3E1%7C%7CHTTP_USER_AGENT=%3EMozilla%2F5.0+%28Linux%3B+Android+5.1.1%3B+Nexus+6+Build%2FLYZ28E%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F48.0.2564.23+Mobile+Safari%2F537.36%7C%7CHTTP_DNT=%3E1%7C%7CHTTP_ACCEPT_ENCODING=%3Egzip%2C+deflate%2C+sdch%7C%7CHTTP_ACCEPT_LANGUAGE=%3Een-US%2Cen%3Bq%3D0.8%2Cbn%3Bq%3D0.6%2Cde%3Bq%3D0.4%7C%7CPATH=%3E%2Fsbin%3A%2Fusr%2Fsbin%3A%2Fbin%3A%2Fusr%2Fbin%7C%7CSERVER_SIGNATURE=%3E%7C%7CSERVER_SOFTWARE=%3EApache%7C%7CSERVER_NAME=%3Ecjack.pbtng.local.photobucket.com%7C%7CSERVER_ADDR=%3E10.2.89.23%7C%7CSERVER_PORT=%3E80%7C%7CREMOTE_ADDR=%3E10.2.14.15%7C%7CDOCUMENT_ROOT=%3E%2Fhome%2Fldap%2Fcjack%2Fpbtng%2Fpublic%7C%7CSERVER_ADMIN=%3Esupport%40photobucket.com%7C%7CSCRIPT_FILENAME=%3E%2Fhome%2Fldap%2Fcjack%2Fpbtng%2Fpublic%2Findex.php%7C%7CREMOTE_PORT=%3E51868%7C%7CREDIRECT_URL=%3E%2Fimages%2Fcat%7C%7CGATEWAY_INTERFACE=%3ECGI%2F1.1%7C%7CSERVER_PROTOCOL=%3EHTTP%2F1.1%7C%7CREQUEST_METHOD=%3EGET%7C%7CQUERY_STRING=%3E%7C%7CREQUEST_URI=%3E%2Fimages%2Fcat%7C%7CSCRIPT_NAME=%3E%2Findex.php%7C%7CPHP_SELF=%3E%2Findex.php%7C%7CREQUEST_TIME_FLOAT=%3E1458383735.686%7C%7CREQUEST_TIME=%3E1458383735&version=1.5&language=javascript&format=wap&cb=1458383736&_=1458383735590";
-            var wr = document.write;
-            $.ajax({
-                url: url,
-                dataType: "script",
-                beforeSend:function(){
-//                    document.write = function(content){
-//                        $('body').after(content);
-//                    };
-                },
-                success: function(response){
-//                    document.write = wr;
-                }
-            });
-        </script>
-    </body>
+
+<head>
+    <!--    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>-->
+    <!--    <script type="text/javascript" async src="http://ads.admarvel.com/fam/javascriptGetAd.php?partner_id=01f7a62b0f0a0513&site_id=17991&target_params=KEYWORDS=%3Ecat%7C%7CSECTION=%3Esearchresults%7C%7CPOS=%3Eatf%7C%7CSITEID=%3E17991%7C%7CBL=%3E0%7C%7CADCOUNT=%3E344&UNIQUE_ID=14581220529055295420773&phone_headers=REDIRECT_OLD_URL=%3Ehttp%3A%2F%2Fpbtng.local.photobucket.com%7C%7CREDIRECT_PRIMARY_SITE=%3Epbtng.local.photobucket.com%7C%7CREDIRECT_APPLICATION_ENV=%3Edevelopment%7C%7CREDIRECT_STATUS=%3E200%7C%7COLD_URL=%3Ehttp%3A%2F%2Fpbtng.local.photobucket.com%7C%7CPRIMARY_SITE=%3Epbtng.local.photobucket.com%7C%7CAPPLICATION_ENV=%3Edevelopment%7C%7CHTTP_HOST=%3Ecjack.pbtng.local.photobucket.com%7C%7CHTTP_UPGRADE_INSECURE_REQUESTS=%3E1%7C%7CHTTP_USER_AGENT=%3EMozilla%2F5.0+%28Linux%3B+Android+5.1.1%3B+Nexus+6+Build%2FLYZ28E%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F48.0.2564.23+Mobile+Safari%2F537.36%7C%7CHTTP_DNT=%3E1%7C%7CHTTP_ACCEPT_ENCODING=%3Egzip%2C+deflate%2C+sdch%7C%7CHTTP_ACCEPT_LANGUAGE=%3Een-US%2Cen%3Bq%3D0.8%2Cbn%3Bq%3D0.6%2Cde%3Bq%3D0.4%7C%7CPATH=%3E%2Fsbin%3A%2Fusr%2Fsbin%3A%2Fbin%3A%2Fusr%2Fbin%7C%7CSERVER_SIGNATURE=%3E%7C%7CSERVER_SOFTWARE=%3EApache%7C%7CSERVER_NAME=%3Ecjack.pbtng.local.photobucket.com%7C%7CSERVER_ADDR=%3E10.2.89.23%7C%7CSERVER_PORT=%3E80%7C%7CREMOTE_ADDR=%3E10.2.14.15%7C%7CDOCUMENT_ROOT=%3E%2Fhome%2Fldap%2Fcjack%2Fpbtng%2Fpublic%7C%7CSERVER_ADMIN=%3Esupport%40photobucket.com%7C%7CSCRIPT_FILENAME=%3E%2Fhome%2Fldap%2Fcjack%2Fpbtng%2Fpublic%2Findex.php%7C%7CREMOTE_PORT=%3E51868%7C%7CREDIRECT_URL=%3E%2Fimages%2Fcat%7C%7CGATEWAY_INTERFACE=%3ECGI%2F1.1%7C%7CSERVER_PROTOCOL=%3EHTTP%2F1.1%7C%7CREQUEST_METHOD=%3EGET%7C%7CQUERY_STRING=%3E%7C%7CREQUEST_URI=%3E%2Fimages%2Fcat%7C%7CSCRIPT_NAME=%3E%2Findex.php%7C%7CPHP_SELF=%3E%2Findex.php%7C%7CREQUEST_TIME_FLOAT=%3E1458383735.686%7C%7CREQUEST_TIME=%3E1458383735&version=1.5&language=javascript&format=wap&cb=1458383736&_=1458383735590"></script>-->
+    <script type="text/javascript" src="jquery-2.2.2.js"></script>
+    <script type="text/javascript">
+        document.write = function(content) {
+            console.log(content);
+            var currentScript = document.currentScript;
+            console.log(document.head.nextSibling);
+            if (currentScript.parentNode == document.head) {
+                // WE NEED TO HANDLE THIS SITUATION.
+                // RIGHT NOW THIS IS THE DRAWBACK OF THIS FUNCTION, THIS FUNCTION MUST NOT BE PLACED IN THE HAED SECTION
+                // THIS FUNCTION MUST BE PLACED IN THE BODY
+//                console.log('script within head, writing content as a last element of the body');
+//                document.getElementsByTagName('body')[0].insertBefore(document.createRange().createContextualFragment(content), null);
+//                return;
+            }
+            currentScript.parentNode.insertBefore(document.createRange().createContextualFragment(content), currentScript.nextSibling);
+        };
+//        document.write("<div>new container from head</div>");
+        var url = "http://ads.admarvel.com/fam/javascriptGetAd.php?partner_id=01f7a62b0f0a0513&site_id=17991&target_params=KEYWORDS=%3Ecat%7C%7CSECTION=%3Esearchresults%7C%7CPOS=%3Eatf%7C%7CSITEID=%3E17991%7C%7CBL=%3E0%7C%7CADCOUNT=%3E344&UNIQUE_ID=14581220529055295420773&phone_headers=REDIRECT_OLD_URL=%3Ehttp%3A%2F%2Fpbtng.local.photobucket.com%7C%7CREDIRECT_PRIMARY_SITE=%3Epbtng.local.photobucket.com%7C%7CREDIRECT_APPLICATION_ENV=%3Edevelopment%7C%7CREDIRECT_STATUS=%3E200%7C%7COLD_URL=%3Ehttp%3A%2F%2Fpbtng.local.photobucket.com%7C%7CPRIMARY_SITE=%3Epbtng.local.photobucket.com%7C%7CAPPLICATION_ENV=%3Edevelopment%7C%7CHTTP_HOST=%3Ecjack.pbtng.local.photobucket.com%7C%7CHTTP_UPGRADE_INSECURE_REQUESTS=%3E1%7C%7CHTTP_USER_AGENT=%3EMozilla%2F5.0+%28Linux%3B+Android+5.1.1%3B+Nexus+6+Build%2FLYZ28E%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F48.0.2564.23+Mobile+Safari%2F537.36%7C%7CHTTP_DNT=%3E1%7C%7CHTTP_ACCEPT_ENCODING=%3Egzip%2C+deflate%2C+sdch%7C%7CHTTP_ACCEPT_LANGUAGE=%3Een-US%2Cen%3Bq%3D0.8%2Cbn%3Bq%3D0.6%2Cde%3Bq%3D0.4%7C%7CPATH=%3E%2Fsbin%3A%2Fusr%2Fsbin%3A%2Fbin%3A%2Fusr%2Fbin%7C%7CSERVER_SIGNATURE=%3E%7C%7CSERVER_SOFTWARE=%3EApache%7C%7CSERVER_NAME=%3Ecjack.pbtng.local.photobucket.com%7C%7CSERVER_ADDR=%3E10.2.89.23%7C%7CSERVER_PORT=%3E80%7C%7CREMOTE_ADDR=%3E10.2.14.15%7C%7CDOCUMENT_ROOT=%3E%2Fhome%2Fldap%2Fcjack%2Fpbtng%2Fpublic%7C%7CSERVER_ADMIN=%3Esupport%40photobucket.com%7C%7CSCRIPT_FILENAME=%3E%2Fhome%2Fldap%2Fcjack%2Fpbtng%2Fpublic%2Findex.php%7C%7CREMOTE_PORT=%3E51868%7C%7CREDIRECT_URL=%3E%2Fimages%2Fcat%7C%7CGATEWAY_INTERFACE=%3ECGI%2F1.1%7C%7CSERVER_PROTOCOL=%3EHTTP%2F1.1%7C%7CREQUEST_METHOD=%3EGET%7C%7CQUERY_STRING=%3E%7C%7CREQUEST_URI=%3E%2Fimages%2Fcat%7C%7CSCRIPT_NAME=%3E%2Findex.php%7C%7CPHP_SELF=%3E%2Findex.php%7C%7CREQUEST_TIME_FLOAT=%3E1458383735.686%7C%7CREQUEST_TIME=%3E1458383735&version=1.5&language=javascript&format=wap&cb=1458383736&_=1458383735590";
+//        document.write("<script type='text/javascript'>alert('new alert');<\/script>");
+//        document.write("<div>new container from head</div>");
+//        $.ajax({
+//            url: url,
+//            dataType: "script",
+//            beforeSend: function() {
+//
+//            },
+//            success: function(response) {
+//                //                    document.write = wr;
+//            }
+//        });
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //        var currentStript = 
+        //        console.log('script detect');
+        //        console.log(document.currentScript);
+    </script>
+    <script type="text/javascript">
+        document.write("<div>new container from head</div>");
+        
+                
+        
+    </script>
+    <script type="text/javascript">
+        //        console.log('script currentScript');
+        //        var currentScript = document.currentScript;
+        //        console.log(currentScript);
+        //        var string = "<script type='text/javascript'>alert('new alert');<\/script>";
+        //        console.log(document.createRange().createContextualFragment(string));
+        ////        var parser = new DOMParser();
+        ////        var stringNode = parser.parseFromString(string,'text/javascript');
+        ////        console.log(stringNode);
+        //        var divNode = document.createElement('div');
+        //        divNode.innerHTML = string;
+        //        currentScript.parentNode.insertBefore(document.createRange().createContextualFragment(string),currentScript.nextSibling);
+
+
+
+        $(function() {
+            //            var string = "<script type='text/javascript'>var a = 'new string';<\/script>";
+            //            console.log($(string));
+            //            console.log('current ready script');
+            //            console.log($(currentScript));
+            //            var allScripts = document.getElementsByTagName('script');
+            //            var lastScript = allScripts[allScripts.length - 1];
+            //            console.log('lastScript');
+            //            console.log(lastScript);
+            //            console.log('ready currentScript');
+            //            console.log(document.currentScript);
+            //            $($(currentScript)).after('dibyendu');
+        });
+        
+    </script>
+</body>
+
 </html>
