@@ -1,0 +1,19 @@
+<html>
+	<head>
+    	<title>Same ID</title>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript">
+			$(document).ready(function(e) {
+                $("#btn").click(function(){
+					alert($(this).val());
+				});
+            });
+		</script>
+    </head>
+    <body>
+    	<input type="button" id="btn" value="Button 1" /><br />
+        <input type="button" id="btn" value="Button 2" /><br />
+        <input type="button" id="btn" value="Button 3" /><br />
+        <input type="button" id="btn" value="Button 4" /><br />
+    </body>
+</html>

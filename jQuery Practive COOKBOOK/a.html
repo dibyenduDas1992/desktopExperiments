@@ -1,0 +1,43 @@
+<!--<html>
+	<head>
+    	<script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript">
+			$(document).ready(function(e) {
+                $("#setValue").click(function(){
+					$("#txt").val("Kushal");
+				});
+				$("#getValue").click(function(){
+					alert($("#txt").val());
+				});
+            });
+		</script>
+    </head>
+    <body>
+    	<input type="text" id="txt" />
+        <input type="button" value="set value" id="setValue" />
+        <input type="button" value="get value" id="getValue" />
+    </body>
+</html>-->
+
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="../../../../xampp/htdocs/Online_Exam/js/jquery.min.js"></script>
+        <script type="text/javascript">
+			//setInterval(function(){ $("#subject_update").click(); },10000);
+		</script>
+    </head>
+    <body style="margin:0 auto;">
+    	<div style="background-color:yellow; width:100%; text-align:center;">
+			<div style="margin:50px auto; background-color:tomato;">
+            	<fieldset style="margin:0 auto; width:50%; text-align:left;">
+                	<legend><b>Enter Subject</b></legend>
+                    <div style="text-align:center;">
+                        <input type="text" class="txt" placeholder="Enter Subject" id="exam_subject" style="width:70%;" autofocus />
+                        <input type="button" class="btn" id="subject_update" value="Update" style="width:20%; height:40px;" onClick="alert('clicked')">
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </body>
+</html>

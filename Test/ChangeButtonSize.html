@@ -1,0 +1,61 @@
+<html>
+      <head>
+            <title>Change Button Size</title>
+            <script type="text/javascript" src="jquery.min.js"></script>
+            <script type="text/javascript">
+                  $(function() {
+                        generateOutputCode('100%', '100%');
+                        $("#rdoLarge").change(function() {
+                              if( $(this).prop('checked') ){
+                                    generateOutputCode('100%', '100%');
+                              }
+                        });
+                        $("#rdoMid").change(function() {
+                              if( $(this).prop('checked') ){
+                                    generateOutputCode('80%', '80%');
+                              }
+                        });
+                        $("#rdoSmall").change(function() {
+                              if( $(this).prop('checked') ){
+                                    generateOutputCode('70%', '60%');
+                              }
+                        });
+
+                        function generateOutputCode(width, height) {
+
+                              var generateButtonDisplay = "<input type='button' value='BOOK SCHEDULE' class='btnSchedule' style='height: " + height + ";width: " + width + ";margin: 0 auto;border-radius: 7px;border: 1px #333 solid;padding: 5px;background-color: #E09530;font-size: 14px;font-weight: bold;color: #fff;' />";
+                              var generateButtonSource = "<div id='btnContent'  style='width:200px;height: 60px;text-align: center;vertical-align: middle;'><input type = 'button' value = 'BOOK SCHEDULE' class = 'btnSchedule' style = 'height: " + height + ";width: " + width + ";margin: 0 auto;border-radius: 7px;border: 1px #333 solid;padding: 5px;background-color: #E09530;font-size: 14px;font-weight: bold;color: #fff;'  onclick='redirectProfessional(512);' / ></div>";
+                              $("#btnContent").html(generateButtonDisplay);
+                              $("#generateCode").text(generateButtonSource);
+                              $("#outer_content").html(generateButtonSource);
+                        }
+                  });
+
+                  function redirectProfessional(professional_id) {
+                        window.location.href = 'http://esolz.co.in/calendardoc/professional_profile/index/' + professional_id;
+                  }
+            </script>
+            <style type="text/css">
+                  .textarea{
+                      width: 500px;
+                      height: 200px;
+                      resize: none;
+                  }
+            </style>
+      </head>
+      <body>
+            <label><input type="radio" id="rdoLarge" name="btnsize" checked />Large</label>
+            <br />
+            <label><input type="radio" id="rdoMid" name="btnsize" />Medium</label>
+            <br />
+            <label><input type="radio" id="rdoSmall" name="btnsize" />Small</label>
+            <br />
+
+            <div id="btnContent"  style="width:200px;height: 60px;text-align: center;vertical-align: middle;">
+
+            </div>
+            <div id="outer_content"></div>
+            <br />
+            <textarea id="generateCode" class="textarea"></textarea>
+      </body>
+</html>

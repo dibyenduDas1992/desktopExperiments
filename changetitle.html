@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Dynamic page title-></title>
+        <link rel="shortcut icon" type="image/x-gif" href="ajax-loader.gif" />
+        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">
+            function changeTitle() {
+                var title = $(document).prop('title'); 
+                console.log(title.indexOf('Dynamic page title->>>'));
+                if (title.indexOf('Dynamic page title->>>') == -1) {
+                    $(document).prop('title', title + '>');
+                    setTimeout(changeTitle, 1000);
+                }
+                else{
+                    $(document).prop('title', 'Dynamic page title-');
+                    setTimeout(changeTitle, 1000);
+                }
+//                $(document).prop('title', 'Dynamic page title <img src="ajax-loader.gif" />');
+                
+            }
+            
+            changeTitle();
+        </script>
+    </head>
+    
+</html>

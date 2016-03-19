@@ -1,0 +1,46 @@
+<html>
+      <head>
+            <title>Form Validation Plugin</title>
+            <script type="text/javascript" src="jquery.min.js"></script>
+            <script type="text/javascript" src="validate.min.js"></script>
+            <style type="text/css">
+                  .error{
+                      color:red;
+                  }
+            </style>
+            <script type="text/javascript">
+                      $(function(){
+                          $("#btnSubmit").click(function(){
+                              $("#frmValidate").validateBlank();
+                          });
+                      });
+            </script>
+      </head>
+      <body>
+            <form method="post" id='frmValidate' action="asfas">
+                  <!--                  <label><input class="valid" type="checkbox" name="users[]" value='1' error_div='users_error' error_msg='Chose User'>User 1</label>
+                  <label><input class="valid" type="checkbox" name="users[]" value='2' error_div='users_error' error_msg='Chose User'>User 2</label>
+                  <label><input class="valid" type="checkbox" name="users[]" value='3' error_div='users_error' error_msg='Chose User'>User 3</label>
+                  <div id="users_error" class='error'></div>
+                  <label><input class="valid" type="radio" name="gender" value='1' error_div='gender_error' error_msg='Select Gender'>Male</label>
+                  <label><input class="valid" type="radio" name="gender" value='2' error_div='gender_error' error_msg='Select Gender'>Female</label>
+                  <label><input class="valid" type="radio" name="gender" value='3' error_div='gender_error' error_msg='Select Gender'>Other</label>
+                  <div id="gender_error" class='error'></div>
+                  <label><input class="valid" type="checkbox" name="hobby[]" value='1' error_div='hobby_error' error_msg='Chose Hobby'>Hobby 1</label>
+                  <label><input class="valid" type="checkbox" name="hobby[]" value='2' error_div='hobby_error' error_msg='Chose Hobby'>Hobby 2</label>
+                  <label><input class="valid" type="checkbox" name="hobby[]" value='3' error_div='hobby_error' error_msg='Chose Hobby'>Hobby 3</label>
+                  <div id="hobby_error" class='error'></div>-->
+                  <input type="file" name='main_image' class="valid" error_div='main_error' error_msg='Main Image Required.' />
+                  <div class='error main_error'></div>
+                  <input type="file" name='other_image[]' class="valid" error_div='other_error' error_msg='Other Image is required' />
+                  <div class='error other_error'></div>
+                  <input type="file" name='other_image[]' class="valid" error_div='other_error' error_msg='Other Image is required' />
+                  <div class='error other_error'></div>
+                  <input type="file" name='other_image[]' class="valid" error_div='other_error' error_msg='Other Image is required' />
+                  <div class='error other_error'></div>
+                  <br />
+                  <img src='' id="image" style='width:300px; height:150px;'>
+                  <input type="button" id="btnSubmit" value="Validate" />
+            </form>
+      </body>
+</html>

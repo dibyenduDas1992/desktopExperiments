@@ -1,0 +1,51 @@
+<div>ffff</div>
+<div>ddd</div>
+<div href="page1.html">Foo1</div>
+<a href="page2.html">Foo2</a>
+<script src="jquery.min.js"></script>
+
+<script>
+(function ($) {
+        $.fn.greenify = function( options ) {
+        // This is the easiest way to have default options.
+            var settings = $.extend({
+                // These are the defaults.
+                color: "#556b2f",
+                backgroundColor: "white"
+            }, options );
+            // Greenify the collection based on the settings variable.
+            function dibya(){
+            alert('Dibya');
+            }
+            //dibya();
+
+            return this.css({
+                color: settings.color,
+                backgroundColor: settings.backgroundColor
+            });
+        };
+        //================================================
+
+    $.fn.showLinkLocation = function() {
+        this.each(function() {
+            var link = $( this );
+            var href = (link.attr('href') != undefined )?link.attr('href'):'';
+            if(href != ""){
+                link.append( " \("+ href +"\)" );
+            }
+        });
+        return this;
+   };
+
+
+    //===========================================
+}( jQuery ));
+
+$("div").greenify({
+    //color: "#999",
+    //backgroundColor: "#fff"
+});
+$( "a,div" ).showLinkLocation();
+
+</script>
+

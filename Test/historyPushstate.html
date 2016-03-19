@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>History.Pushstate Test</title>
+        <script type="text/javascript" src="jquery.min.js"></script>
+    </head>
+    <body>
+        <a href="#" data-location="/inbox/12">Email Item 12</a>
+<a href="#" data-location="/inbox/13">Email Item 13</a>
+
+<script type="text/javascript">
+(function($) {
+  $(document).ready(function() {
+    $('a').click(function (e) {
+      e.preventDefault();
+      // Detect if pushState is available
+      if(history.pushState) {
+        // update URL to /inbox/N
+        history.pushState(null, null, $(this).attr('data-location'));
+        // showMailItem(); //show email based on link clicked
+      }
+      return false;
+    });
+  });
+
+  // Used to detect initial (useless) popstate.
+  // If history.state exists, assume browser isn't going to fire initial popstate.
+  var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
+
+  $(window).bind('popstate', function (event) {
+    // Ignore inital popstate that some browsers fire on page load
+    var initialPop = !popped && location.href == initialURL
+    popped = true
+    if (initialPop) return;
+
+    // showMailOverview(); // display all email since the user clicked Back
+
+  });
+})(jQuery);
+</script>
+    </body>
+</html>
